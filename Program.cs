@@ -9,21 +9,31 @@ namespace ConsoleApp1
             Console.WriteLine("Teste1");
             Console.WriteLine("Teste2");
 
+            Console.WriteLine("");
 
-
-            for (int i = 0; i =< 10; i++)
+            for (int i = 0; i <= 10; i++)
             {
                 Console.WriteLine("Count {0} ", i);
             }
 
+            Console.WriteLine("");
             // Get an array of the command line arguments
             string[] myArgs = Environment.GetCommandLineArgs();
 
             // Use the Join function to combine arguments with a comma
             Console.WriteLine(string.Join(", ", myArgs));
 
-            SayHello();
+            Console.WriteLine("");
+            var intVal = 1234;
 
+            Console.WriteLine("intVal Type : {0}", intVal.GetType());
+            // Arrays
+
+            Console.WriteLine("");
+
+            //SayHello();
+
+            
             Console.ReadLine();
 
         }
