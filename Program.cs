@@ -7,33 +7,15 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Teste1");
-            Console.WriteLine("Teste2");
+            //Console.WriteLine("Teste2");
 
-            Console.WriteLine("");
-
-            for (int i = 0; i <= 10; i++)
-            {
-                Console.WriteLine("Count {0} ", i);
-            }
-
-            Console.WriteLine("");
-            // Get an array of the command line arguments
-            string[] myArgs = Environment.GetCommandLineArgs();
-
-            // Use the Join function to combine arguments with a comma
-            Console.WriteLine(string.Join(", ", myArgs));
-
-            Console.WriteLine("");
-            var intVal = 1234;
-
-            Console.WriteLine("intVal Type : {0}", intVal.GetType());
-            // Arrays
-
-            Console.WriteLine("");
-
+            //For1();
+            //Console.WriteLine("");
+            //Arg1();         
+            //Class1
             //SayHello();
+            //Console.WriteLine("[0]",Class1.SayHello1()); 
 
-            
             Console.ReadLine();
 
         }
@@ -51,6 +33,31 @@ namespace ConsoleApp1
             name = Console.ReadLine();
 
             Console.WriteLine("Hello {0}", name);
+        }
+
+        private static void For1()
+        {
+            Console.WriteLine("");
+
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Count {0} ", i);
+                //Console.ReadLine();
+                bool Console.KeyAvailable{ get; };
+                Console.WriteLine("Press Enter to Continues");
+            }
+        }
+
+        private static void Arg1()
+        {
+            Console.WriteLine("");
+            //Get an array of the command line arguments
+            string[] myArgs = Environment.GetCommandLineArgs();
+
+            //Use the Join function to combine arguments with a comma
+            Console.WriteLine(string.Join(", ", myArgs));
+
+            Console.WriteLine("");
         }
     }
 }
