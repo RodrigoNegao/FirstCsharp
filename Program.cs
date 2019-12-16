@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic; // necessary to use Collection
 
 namespace ConsoleApp1
 {
@@ -10,11 +11,15 @@ namespace ConsoleApp1
             //Console.WriteLine("Teste2");
 
             //For1();
-            //Console.WriteLine("");
+            Console.WriteLine("");
             //Arg1();         
             //Class1
             //SayHello();
             //Console.WriteLine("[0]",Class1.SayHello1()); 
+            
+            //Array1();
+
+            Collection1();
 
             Console.ReadLine();
 
@@ -43,7 +48,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Count {0} ", i);
                 //Console.ReadLine();
-                bool Console.KeyAvailable{ get; };
+                //bool Console.KeyAvailable{ get; };
                 Console.WriteLine("Press Enter to Continues");
             }
         }
@@ -58,6 +63,56 @@ namespace ConsoleApp1
             Console.WriteLine(string.Join(", ", myArgs));
 
             Console.WriteLine("");
+        }
+
+        private static void Array1()
+        {
+            //Array
+            string[] List = new string[3];
+
+            List[0] = "Bianca";
+            List[1] = "Nando";
+            List[2] = "Amanda";
+
+            // Like OrderBy Alphabet
+            Array.Sort(List);
+
+            int size = List.Length;
+
+            Console.WriteLine("Existe {0} contatos", size);
+
+            // loop
+            foreach (string Name in List)
+            {
+                Console.WriteLine(Name);
+            }
+        }
+
+        private static void Collection1()
+        {
+            //Collection
+            List<string> List1 = new List<string>();
+            List1.Add("Roger");
+            List1.Add("Andrezza");
+            List1.Add("Bruninho");
+
+            Console.WriteLine(List1[0]);
+
+            Console.WriteLine("");
+
+            //List1.;
+
+            foreach (string Name1 in List1)
+            {
+                Console.WriteLine(Name1);
+            }
+
+            Console.WriteLine("");
+
+            if (List1.Exists (e=> e == "Andrezza"))
+            {
+                Console.WriteLine("Andrezza existe no Collection");
+            }
         }
     }
 }
