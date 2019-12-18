@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic; // necessary to use Collection
 
+
+//PascalCase
+//camelCase
+//underscore or Snake Case or (Under_line Brazlian most common)
+
+
 namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Teste1");
+            Console.WriteLine("Begin");
             //Console.WriteLine("Teste2");
 
             //For1();
@@ -15,12 +21,27 @@ namespace ConsoleApp1
             //Arg1();         
             //Class1
             //SayHello();
-            //Console.WriteLine("[0]",Class1.SayHello1()); 
-            
+            //Console.WriteLine("{0}"); 
+
             //Array1();
 
-            Collection1();
+            //Collection1();
 
+            //MutiplicationTable(2);
+
+            //MutiplicationTable(3);
+
+            //Console.WriteLine(Class1.CalcularSoma());
+
+            //Cause don't use Static at Function    
+            //var NewClass = new Class1();
+            //var Total = NewClass.CalcularSoma2();
+            //Console.WriteLine(Total);
+
+            //Class1.FileRead(@"C:\Users\rodrigo negao\Desktop\PROJETOS\C#\ConsoleApp1\arg1.txt");
+            
+            Class1.FileRead(1);
+            
             Console.ReadLine();
 
         }
@@ -95,12 +116,15 @@ namespace ConsoleApp1
             List1.Add("Roger");
             List1.Add("Andrezza");
             List1.Add("Bruninho");
+            List1.Add("Zeilane");
 
             Console.WriteLine(List1[0]);
 
             Console.WriteLine("");
 
-            //List1.;
+            int Counter = List1.Count;
+
+            Console.WriteLine("{0} Contatos", Counter);
 
             foreach (string Name1 in List1)
             {
@@ -113,6 +137,17 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Andrezza existe no Collection");
             }
+        }
+
+        //Functions
+        public static void MutiplicationTable(int number)
+        {
+            Console.WriteLine("===============================");
+             for (int i = 1; i<=10; i++)
+            {
+                Console.WriteLine(number + " X " + i + " = " +(number * i));
+            }
+            Console.WriteLine("===============================");
         }
     }
 }
