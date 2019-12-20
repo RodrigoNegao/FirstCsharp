@@ -11,15 +11,19 @@ namespace ConsoleApp1
 {
     class Program
     {
+        public const int SAIDA_PROGRAMA = 0;
+        public const int LER_ARQUIVOS = 1;
+        public const int TABUADA = 2;
+        public const int CALCULAR_MEDIA = 3;
         static void Main(string[] args)
         {
-            Console.WriteLine("Begin");
+            // Execises 1 --------------------------------------------------
+            //Console.WriteLine("Begin");
             //Console.WriteLine("Teste2");
 
             //For1();
-            Console.WriteLine("");
+            //Console.WriteLine("");
             //Arg1();         
-            //Class1
             //SayHello();
             //Console.WriteLine("{0}"); 
 
@@ -39,10 +43,70 @@ namespace ConsoleApp1
             //Console.WriteLine(Total);
 
             //Class1.FileRead(@"C:\Users\rodrigo negao\Desktop\PROJETOS\C#\ConsoleApp1\arg1.txt");
-            
-            Class1.FileRead(1);
-            
-            Console.ReadLine();
+
+            //Class1.FileRead(1);
+
+            //Exercises 2 OOP --------------------------------------------
+
+            Menu();         
+
+            //Console.ReadLine();
+
+        }
+
+        private static void Menu()
+        {
+            while (true)
+            {
+                Console.WriteLine("\n=============================================\n");
+                string mensage = "Eae , Usuário, blz ?\n" +
+                    "\n Ultilizando programção funcional \n" +
+                    "\n\n" +
+                    "Digite uma das opções abaixo: \n" +
+                    "      00 - Sair do programa abaixo; \n" +
+                    "      01 - Ler Arquivos; \n" +
+                    "      02 - Executar a Tabuada; \n" +
+                    "      03 - Executar a média.";
+                Console.WriteLine(mensage);
+                Console.WriteLine("\n=============================================\n");
+
+                //Console.ReadLine();
+
+                Console.WriteLine("Digite " + SAIDA_PROGRAMA + " para sair do Programa.");
+                int valor = int.Parse(Console.ReadLine());
+
+
+
+                if (valor == SAIDA_PROGRAMA)
+                {
+                    break;
+                }
+                else if (valor == LER_ARQUIVOS)
+                {
+                    Console.WriteLine("======== Opção Ler Arquivos ====================");
+                    Class1.FileRead(1);
+                    Console.WriteLine("\n=============================================\n");
+                }
+                else if (valor == TABUADA)
+                {
+                    Console.WriteLine("======== Opção Tabuada =======================");
+                    Console.WriteLine("Digite o numero desejado para Calcular:");
+                    int number = int.Parse(Console.ReadLine());
+                    MutiplicationTable(number);
+                    Console.WriteLine("\n=============================================\n");
+                }
+                else if (valor == CALCULAR_MEDIA)
+                {
+                    Console.WriteLine("======== Opção Calcular a Média ===============");
+                    Class1.CalcMediaAlunos();
+                    Console.WriteLine("\n=============================================\n");
+                }
+                else
+                {
+                    Console.WriteLine("********* Opção Invalida digite Novamente ***********");
+                    Console.WriteLine("\n=============================================\n");
+                }
+            }
 
         }
 
@@ -142,7 +206,7 @@ namespace ConsoleApp1
         //Functions
         public static void MutiplicationTable(int number)
         {
-            Console.WriteLine("===============================");
+            Console.WriteLine("========Calculo da da Tabuada " + number +" =======================");
              for (int i = 1; i<=10; i++)
             {
                 Console.WriteLine(number + " X " + i + " = " +(number * i));
