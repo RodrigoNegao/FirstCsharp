@@ -1,7 +1,7 @@
 ﻿using Menu;
 using System;
 using System.Collections.Generic; // necessary to use Colle System.Configuration
-
+using Customer1;
 
 //PascalCase
 //camelCase
@@ -51,13 +51,26 @@ namespace ConsoleApp1
             //var NewClass = new Configuration.JsonResult();
             //NewClass.JsonResult();
 
-            Menu1.MainMenu();      
+            //Menu1.MainMenu();      
 
             //Console.ReadLine();
 
+
+            // Exercises 3 OOP ---------------------------------------------
+
+            //Customer.ReadCustomer();
+
+            //var cliente = new Customer();
+            //cliente.Name = "vitinho";
+            //cliente.NPhone = "5398150500";
+            //cliente.CPF = "010202001";
+            //cliente.SaveCustomer();
+
+            var Customer1 = Customer.ReadCustomer();
+
         }
 
-        
+
 
         // You can create your own functions (methods)
         private static void SayHello()
