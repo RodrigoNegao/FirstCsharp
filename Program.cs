@@ -1,6 +1,6 @@
 ﻿using Menu;
 using System;
-using System.Collections.Generic; // necessary to use Collection
+using System.Collections.Generic; // necessary to use Colle System.Configuration
 
 
 //PascalCase
@@ -13,8 +13,10 @@ namespace ConsoleApp1
     class Program
     {
         
+
         static void Main(string[] args)
         {
+
             // Execises 1 --------------------------------------------------
             //Console.WriteLine("Begin");
             //Console.WriteLine("Teste2");
@@ -45,6 +47,9 @@ namespace ConsoleApp1
             //Class1.FileRead(1);
 
             //Exercises 2 OOP --------------------------------------------
+
+            //var NewClass = new Configuration.JsonResult();
+            //NewClass.JsonResult();
 
             Menu1.MainMenu();      
 

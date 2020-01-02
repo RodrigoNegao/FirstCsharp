@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -7,11 +8,14 @@ namespace Files
 {
     class ReadFiles
     {
-        public static void FileRead(int NumberFile)       //string fileName)
+        public static void FileRead(int NumberFile) 
         {
-
-            //string DirectoryFile = Path.Combine(Directory.GetCurrentDirectory() + fileName);
-            string DirectoryFile = @"C:\Users\rodrigo negao\Desktop\PROJETOS\C#\ConsoleApp1\Files\arg" + NumberFile + ".txt";
+            //string value1 = ConfigurationManager.AppSetting["directory:fileDirectory"]; config.cs
+            
+            //string value1 = 
+            
+            string DirectoryFile = @"C:\Users\rodrigo negao\Desktop\PROJETOS\C#\ConsoleApp1\Files\arg" + NumberFile + ".txt"; 
+            
             Console.WriteLine("===========Reading File============\n" +
                 DirectoryFile + "\n=================================");
 
