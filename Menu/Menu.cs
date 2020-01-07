@@ -4,6 +4,7 @@ using Files;
 using Table;
 using System.Collections.Generic;
 using System.Text;
+using Customer2;
 
 namespace Menu
 {
@@ -13,6 +14,7 @@ namespace Menu
         public const int LER_ARQUIVOS = 1;
         public const int TABUADA = 2;
         public const int CALCULAR_MEDIA = 3;
+        public const int CALL_MENUC = 4;
         public static void MainMenu()
         {
             while (true)
@@ -25,7 +27,8 @@ namespace Menu
                     "      00 - Sair do programa abaixo; \n" +
                     "      01 - Ler Arquivos; \n" +
                     "      02 - Executar a Tabuada; \n" +
-                    "      03 - Executar a média.";
+                    "      03 - Executar a média.\n"  +
+                    "      04 - Executar a Menu Clientes.\n";
                 Console.WriteLine(mensage);
                 Console.WriteLine("\n=============================================\n");
 
@@ -60,8 +63,15 @@ namespace Menu
                     MedianCalc.CalcMediaAlunos();
                     Console.WriteLine("\n=============================================\n");
                 }
+                else if (valor == CALL_MENUC)
+                {
+                    Console.WriteLine("======== Opção Menu Cliente ==================");
+                    CustomerMenu.CustomerMenu1() ;
+                    Console.WriteLine("\n=============================================\n");
+                }                
                 else
                 {
+                    Console.WriteLine("\n=============================================\n");
                     Console.WriteLine("********* Opção Invalida digite Novamente ***********");
                     Console.WriteLine("\n=============================================\n");
                 }

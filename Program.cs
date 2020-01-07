@@ -58,15 +58,7 @@ namespace ConsoleApp1
 
             // Exercises 3 OOP ---------------------------------------------
 
-            //Customer.ReadCustomer();
-
-            //var cliente = new Customer();
-            //cliente.Name = "vitinho";
-            //cliente.NPhone = "5398150500";
-            //cliente.CPF = "010202001";
-            //cliente.SaveCustomer();
-
-            var Customer1 = Customer.ReadCustomer();
+            Menu1.MainMenu();  
 
         }
 
