@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic; // necessary to use Colle System.Configuration
 using Customer1;
+using User1;
 
 //PascalCase
 //camelCase
@@ -58,7 +59,40 @@ namespace ConsoleApp1
 
             // Exercises 3 OOP ---------------------------------------------
 
-            Menu1.MainMenu();  
+            // Menu1.MainMenu();  
+
+            // Exercises 4 inheritance/Polymorphism OOP  (Herança/Polimorfismo(diferente de "Polymorphism code" )) -----------------------
+
+            //Menu1.MainMenu();
+
+            //Customer c = new Customer();
+            //c.Name = "carlos";
+            //c.NPhone = "carlos";
+            //c.CPF = "carlos";
+            //c.SaveData();
+
+            //foreach (Customer cu in Customer.ReadCustomer())
+            //{
+            //    Console.WriteLine(cu.Name);
+            //    Console.WriteLine(cu.CPF);
+            //    Console.WriteLine(cu.NPhone);
+            //    Console.WriteLine("================");
+            //}
+
+            //User u = new User();
+            //u.Name = "carlos";
+            //u.NPhone = "carlos";
+            //u.CPF = "carlos";
+            //u.SaveData();
+
+            //foreach (User us in User.ReadUser())
+            //{
+            //    Console.WriteLine(us.Name);
+            //    Console.WriteLine(us.CPF);
+            //    Console.WriteLine(us.NPhone);
+            //    Console.WriteLine("================");
+            //}
+
 
         }
 

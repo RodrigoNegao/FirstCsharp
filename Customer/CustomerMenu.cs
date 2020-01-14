@@ -83,7 +83,7 @@ namespace Customer2
             cliente.NPhone = Console.ReadLine();
             Console.WriteLine("Numero do CPF:");
             cliente.CPF = Console.ReadLine();
-            cliente.SaveCustomer();
+            cliente.SaveData();
             //if ()
             //{
             //    Console.WriteLine("Cadastro Salvo Com Sucesso;");

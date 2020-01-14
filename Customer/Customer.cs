@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration; // You need install Packages 
 using System.IO;
 using System.Text;
+using User1;
 
 // System.Configuration.ConfigurationManager
 //1º Right click at dependencies;
@@ -22,50 +23,63 @@ namespace Customer1
         /// <param name="nome">Teste1</param>
         /// <param name="CPF">Teste2</param>
         /// <param name="Nphone">Teste3</param>
-        //public Customer(string nome, string Nphone, string CPF)
-        //{
-        //    //This can't equal a null or blanc
-        //    //this.Name = _nome;
-        //}
+        public Customer(string nome, string Nphone, string CPF)
+        {
+            //This can't equal a null or blanc
+            this.Name = nome;
+            this.NPhone = Nphone;
+            this.CPF = CPF;
+        }
+        public Customer()
+        {
+
+        }
 
         public string Name;
         public string NPhone;
         public string CPF;
 
-        public void SaveCustomer()
-        {
-            //TODO Implementar
-            var SCustomer = Customer.ReadCustomer();
-            SCustomer.Add(this);
-            if (File.Exists(DirectoryCustomer()))
-            {
-                StreamWriter r = new StreamWriter(DirectoryCustomer());
-                string Data = "nome;telefone;CPF;"; //n";
-                r.WriteLine(Data);
-                foreach (Customer c in SCustomer)
-                {
-                    var linha = c.Name + ";" + c.NPhone + ";" + c.CPF + ";"; // bug "\n" ---   Data += var linha = 
-                    r.WriteLine(linha);
-                }
-
-                r.Close();
-                //File.WriteAllText(DirectoryCustomer(), Data);
-            }
-        }
-
-        public static string DirectoryCustomer()
+        private static string Directory()
         {
             return ConfigurationManager.AppSettings["Customer1"];
         }
+               
+        
+        public virtual void SaveData() // if you never override use 'sealed'
+        {
+            //TODO Mudar o save
+            if (this.GetType() == typeof(Customer))
+            {
+                var SCustomer = Customer.ReadCustomer();
+                SCustomer.Add(this);
+                if (File.Exists(Directory()))
+                {
+                    StreamWriter r = new StreamWriter(Directory());
+                    string Data = "nome;telefone;CPF;"; //n";
+                    r.WriteLine(Data);
+                    foreach (Customer c in SCustomer)
+                    {
+                        var linha = c.Name + ";" + c.NPhone + ";" + c.CPF + ";"; // bug "\n" ---   Data += var linha = 
+                        r.WriteLine(linha);
+                    }
+
+                    r.Close();
+                    //File.WriteAllText(DirectoryCustomer(), Data);
+                }
+            }
+            
+        }
+
+        
 
         public static List<Customer> ReadCustomer()
         {
             var customers1 = new List<Customer>();
 
-            if (File.Exists(DirectoryCustomer()))
+            if (File.Exists(Directory()))
             {
                 //Console.WriteLine("Your file content is:");
-                using (StreamReader arquivo = File.OpenText(DirectoryCustomer()))
+                using (StreamReader arquivo = File.OpenText(Directory()))
                 {
                     string linha;
                     int i = 0;
@@ -92,5 +106,7 @@ namespace Customer1
 
             return customers1;
         }
+       
+        
     }
 }
