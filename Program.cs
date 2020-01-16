@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic; // necessary to use Colle System.Configuration
 using Customer1;
 using User1;
+using Componentes;
 
 //PascalCase
 //camelCase
@@ -93,6 +94,8 @@ namespace ConsoleApp1
             //    Console.WriteLine("================");
             //}
 
+            Ferramentas f = new Ferramentas();
+            f.PublicAssembly();
 
         }
 
