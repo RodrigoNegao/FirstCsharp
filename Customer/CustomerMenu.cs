@@ -1,4 +1,5 @@
-﻿using Customer1;
+﻿using Base1;
+using Customer1;
 using Files;
 using Menu;
 using System;
@@ -38,13 +39,13 @@ namespace Customer2
                 else if (valor == CREATE_CUSTOMER)
                 {
                     Console.WriteLine("===== Opção Cadastrar Cliente ===================");
-                    CreateCustomer(); //ReadFiles.FileRead(1);
+                        CreateCustomer(); //ReadFiles.FileRead(1);
                     Console.WriteLine("\n=============================================\n");
                 }               
                 else if (valor == CALL_LIST)
                 {
-                    //Console.WriteLine("======== Lista de Cliente ==================");
-                    ListCustomer();
+                    Console.WriteLine("======== Lista de Cliente ==================");
+                       // ListCustomer();
                     Console.WriteLine("\n=============================================\n");
                 }
                 else
@@ -59,20 +60,20 @@ namespace Customer2
 
 
 
-        public static void ListCustomer()
-            {
-                var Customer1 = Customer.ReadCustomer();
-                Console.WriteLine("\n======Essa é a Lista de Clientes=========\n");
-                foreach (Customer c in Customer1)
-                {
-                    Console.WriteLine(c.Name);
-                    Console.WriteLine(c.NPhone);
-                    Console.WriteLine(c.CPF);
-                    Console.WriteLine("\n==================================\n");
-                }
+        //public static void ListCustomer()
+        //{
+        //    var Customer1 = new Customer().ReadPeople(); //Customer.ReadCustomer() ;
+        //    Console.WriteLine("\n======Essa é a Lista de Clientes=========\n");
+        //    foreach (Customer c in Customer1) // TODO ERROR INTERFACE
+        //    {
+        //        Console.WriteLine(c.Name);
+        //        Console.WriteLine(c.NPhone);
+        //        Console.WriteLine(c.CPF);
+        //        Console.WriteLine("\n==================================\n");
+        //    }
 
-                Console.ReadLine();
-            }
+        //    Console.ReadLine();
+        //}
 
         public static void CreateCustomer()
         {
@@ -83,14 +84,15 @@ namespace Customer2
             cliente.NPhone = Console.ReadLine();
             Console.WriteLine("Numero do CPF:");
             cliente.CPF = Console.ReadLine();
+            //var saveCliente = new Customer().Savedata();
             cliente.SaveData();
-            //if ()
-            //{
-            //    Console.WriteLine("Cadastro Salvo Com Sucesso;");
-            //}                
+            //    //if ()
+            //    //{
+            //    //    Console.WriteLine("Cadastro Salvo Com Sucesso;");
+            //    //}                
+            }
+
+
+            //Customer = new Customer();
         }
-
-
-        //Customer = new Customer();
-    }
 }

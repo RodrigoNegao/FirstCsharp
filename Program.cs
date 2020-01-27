@@ -62,17 +62,17 @@ namespace ConsoleApp1
 
             // Menu1.MainMenu();  
 
-            // Exercises 4 inheritance/Polymorphism OOP  (Herança/Polimorfismo(diferente de "Polymorphism code" )) -----------------------
+            // Exercises 4 Inheritance/Polymorphism OOP  (Herança/Polimorfismo(diferente de "Polymorphism code" )) -----------------------
 
-            //Menu1.MainMenu();
+            Menu1.MainMenu();
 
             //Customer c = new Customer();
-            //c.Name = "carlos";
-            //c.NPhone = "carlos";
-            //c.CPF = "carlos";
+            //c.Name = "carlos1";
+            //c.NPhone = "carlos1";
+            //c.CPF = "carlos1";
             //c.SaveData();
 
-            //foreach (Customer cu in Customer.ReadCustomer())
+            //foreach (Customer cu in Customer.ReadPeople())
             //{
             //    Console.WriteLine(cu.Name);
             //    Console.WriteLine(cu.CPF);
@@ -94,8 +94,12 @@ namespace ConsoleApp1
             //    Console.WriteLine("================");
             //}
 
-            Ferramentas f = new Ferramentas();
-            f.PublicAssembly();
+            // Exercises 5 Assembly .DLL -------------------------------------------------
+            //Ferramentas f = new Ferramentas();
+            //f.PublicAssembly();
+
+            // Exercises 6  (Interface Like Signals Python) -----------------------------------------------
+
 
         }
 

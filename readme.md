@@ -1,5 +1,5 @@
 # Pasta C#
-Aqui você vera exemplos de C#
+Aqui você vera exemplos de C# Console NET Core.
 
 ## Exemplos
 
@@ -17,7 +17,7 @@ Aqui você vera exemplos de C#
 - POO HERANÇA ;
 - POO POLIFORMISMO ;
 - POO PROTEGIDOS E INTERNOS;
-- POO INTERFACE ;
-- POO ABSTRAÇÃO ;
-- POO PERMISSÕES E AGRUPAMENTO ;
-- POO CLASSE SINGLETON ;
+- POO INTERFACE ; x testes
+- POO ABSTRAÇÃO ; x testes
+- POO PERMISSÕES E AGRUPAMENTO ; x testes
+- POO CLASSE SINGLETON ; x testes

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interface;
+using System;
 using System.Collections.Generic;
 using System.Configuration; // You need install Packages 
 using System.IO;
@@ -14,8 +15,11 @@ using User1;
 
 namespace Customer1
 {
-    public class Customer
+    public class Customer : IPeople
     {
+        public string Name; //{ get; set; }
+        public string NPhone; //{ get; set; }
+        public string CPF; //{ get; set; }
 
         /// <summary>
         /// Construtor
@@ -35,78 +39,88 @@ namespace Customer1
 
         }
 
-        public string Name;
-        public string NPhone;
-        public string CPF;
 
-        private static string Directory()
-        {
-            return ConfigurationManager.AppSettings["Customer1"];
-        }
-               
-        
-        public virtual void SaveData() // if you never override use 'sealed'
-        {
-            //TODO Mudar o save
-            if (this.GetType() == typeof(Customer))
-            {
-                var SCustomer = Customer.ReadCustomer();
-                SCustomer.Add(this);
-                if (File.Exists(Directory()))
-                {
-                    StreamWriter r = new StreamWriter(Directory());
-                    string Data = "nome;telefone;CPF;"; //n";
-                    r.WriteLine(Data);
-                    foreach (Customer c in SCustomer)
-                    {
-                        var linha = c.Name + ";" + c.NPhone + ";" + c.CPF + ";"; // bug "\n" ---   Data += var linha = 
-                        r.WriteLine(linha);
-                    }
+        //internal object ReadPeople()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-                    r.Close();
-                    //File.WriteAllText(DirectoryCustomer(), Data);
-                }
-            }
-            
-        }
+        //internal void SaveData()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        
+        //private static string Directory()
+        //{
+        //    return ConfigurationManager.AppSettings["Customer1"];
+        //}
 
-        public static List<Customer> ReadCustomer()
-        {
-            var customers1 = new List<Customer>();
 
-            if (File.Exists(Directory()))
-            {
-                //Console.WriteLine("Your file content is:");
-                using (StreamReader arquivo = File.OpenText(Directory()))
-                {
-                    string linha;
-                    int i = 0;
-                    while ((linha = arquivo.ReadLine()) != null)
-                    {
-                        i++;
-                        if (i == 1) continue;
-                        var DataCustomer = linha.Split(';');
+        //public virtual void SaveData() // if you never override use 'sealed'
+        //{
+        //    //TODO Mudar o save
+        //    if (this.GetType() == typeof(Customer))
+        //    {
+        //        var SCustomer = Customer.ReadCustomer();
+        //        SCustomer.Add(this);
+        //        if (File.Exists(Directory()))
+        //        {
+        //            StreamWriter r = new StreamWriter(Directory());
+        //            string Data = "nome;telefone;CPF;"; //n";
+        //            r.WriteLine(Data);
+        //            foreach (Customer c in SCustomer)
+        //            {
+        //                var linha = c.Name + ";" + c.NPhone + ";" + c.CPF + ";"; // bug "\n" ---   Data += var linha = 
+        //                r.WriteLine(linha);
+        //            }
 
-                        var Customer2 = new Customer { Name = DataCustomer[0], NPhone = DataCustomer[1],CPF = DataCustomer[2]};
+        //            r.Close();
+        //            //File.WriteAllText(DirectoryCustomer(), Data);
+        //        }
+        //    }
 
-                        //var Customer2 = new Customer();// DataCustomer[0], DataCustomer[1], DataCustomer[2]); Dont Save #TODO how to save this method
+        //}
 
-                        //Customer2.Name = DataCustomer[0];
-                        //Customer2.NPhone = DataCustomer[1];
-                        //Customer2.CPF = DataCustomer[2];
 
-                        customers1.Add(Customer2);
-                        //Console.WriteLine(linha);
-                    }
-                }
 
-            }
+        //public static List<Customer> ReadCustomer()
+        //{
+        //    var customers1 = new List<Customer>();
 
-            return customers1;
-        }
-       
-        
+        //    if (File.Exists(Directory()))
+        //    {
+        //        //Console.WriteLine("Your file content is:");
+        //        using (StreamReader arquivo = File.OpenText(Directory()))
+        //        {
+        //            string linha;
+        //            int i = 0;
+        //            while ((linha = arquivo.ReadLine()) != null)
+        //            {
+        //                i++;
+        //                if (i == 1) continue;
+        //                var DataCustomer = linha.Split(';');
+
+        //                var Customer2 = new Customer { Name = DataCustomer[0], NPhone = DataCustomer[1], CPF = DataCustomer[2] };
+
+        //                //var Customer2 = new Customer();// DataCustomer[0], DataCustomer[1], DataCustomer[2]); Dont Save #TODO how to save this method
+
+        //                Customer2.Name = DataCustomer[0];
+        //                Customer2.NPhone = DataCustomer[1];
+        //                Customer2.CPF = DataCustomer[2];
+
+        //                customers1.Add(Customer2);
+        //            }
+        //        }
+
+        //    }
+
+        //    return customers1;
+
+        //}
+
+        //public void SavaData()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
