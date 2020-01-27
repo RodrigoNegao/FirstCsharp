@@ -17,7 +17,7 @@ Aqui você vera exemplos de C# Console NET Core.
 - POO HERANÇA ;
 - POO POLIFORMISMO ;
 - POO PROTEGIDOS E INTERNOS;
-- POO INTERFACE ; x testes
+- POO INTERFACE (Dependency injection in Console ASP.NET Core) ; x testes
 - POO ABSTRAÇÃO ; x testes
 - POO PERMISSÕES E AGRUPAMENTO ; x testes
 - POO CLASSE SINGLETON ; x testes
