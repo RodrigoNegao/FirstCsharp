@@ -7,12 +7,13 @@ using System.Text;
 
 namespace Base1
 {
-    public class Base : IPeople
+    public class Base : IPeople   //,  IBase
     {
         public string Name;// { get; set; }
         public string NPhone; // { get; set; }
         public string CPF; //{ get; set; }
 
+        
         /// <summary>
         /// Construtor
         /// </summary>
@@ -91,7 +92,7 @@ namespace Base1
 
             return dados;
         }
-               
-       
+
+
     }
 }
